@@ -9,7 +9,7 @@ export const routes: Routes = [
 },
 
 {
-    path: '',
+    path: 'home',
     loadComponent: ()=>
         import('./pages/home/home.component').then(m=> m.HomeComponent)
 
