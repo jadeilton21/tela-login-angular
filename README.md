@@ -32,19 +32,19 @@ Confira a interface do projeto em diferentes estados:
 ### 1. Tela de Login
 Design focado na clareza e simplicidade.
 <p align="center">
-  <img src="screenshots/login.png" width="800" alt="Tela de Login">
+  <img src="login.png" width="800" alt="Tela de Login">
 </p>
 
 ### 2. Tela de Cadastro
 Formulário intuitivo para novos usuários.
 <p align="center">
-  <img src="screenshots/cadastro.png" width="800" alt="Tela de Cadastro">
+  <img src="cadastro.png" width="800" alt="Tela de Cadastro">
 </p>
 
 ### 3. Dashboard (Home)
 Zona de calma com clima em tempo real e citações inspiradoras.
 <p align="center">
-  <img src="screenshots/home.png" width="800" alt="Tela Home">
+  <img src="home.png" width="800" alt="Tela Home">
 </p>
 
 ---
