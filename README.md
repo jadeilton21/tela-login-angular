@@ -1,59 +1,68 @@
-# TelaLogin
+# ✨ Aura - Sua Zona de Calma
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+A **Aura** é uma aplicação web minimalista desenvolvida com **Angular**, focada em proporcionar uma experiência de usuário tranquila e sem distrações. O projeto simula um ecossistema de bem-estar, começando por um fluxo de autenticação limpo até uma dashboard relaxante.
 
-## Development server
+O projeto foi estruturado para demonstrar conceitos de organização de componentes, roteamento e design responsivo.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Demonstração
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Você pode acessar o projeto online através do link abaixo:
+🔗 **[Aura - Live Preview](https://lightcoral-loris-672042.hostingersite.com)**
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-ng generate component component-name
-```
+Este projeto foi construído utilizando as seguintes ferramentas:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* **Framework:** [Angular](https://angular.io/) (v17+)
+* **Linguagem:** TypeScript
+* **Estilização:** CSS3 (Flexbox e Grid para layout responsivo)
+* **Deployment:** [Hostinger](https://www.hostinger.com.br/)
+* **Ícones/Design:** Google Fonts & Custom Assets
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 📸 Screenshots
 
-To build the project run:
+Confira a interface do projeto em diferentes estados:
 
-```bash
-ng build
-```
+### 1. Tela de Login
+Design focado na clareza e simplicidade.
+<p align="center">
+  <img src="screenshots/login.png" width="800" alt="Tela de Login">
+</p>
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 2. Tela de Cadastro
+Formulário intuitivo para novos usuários.
+<p align="center">
+  <img src="screenshots/cadastro.png" width="800" alt="Tela de Cadastro">
+</p>
 
-## Running unit tests
+### 3. Dashboard (Home)
+Zona de calma com clima em tempo real e citações inspiradoras.
+<p align="center">
+  <img src="screenshots/home.png" width="800" alt="Tela Home">
+</p>
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🧠 Estrutura do Projeto
 
-## Running end-to-end tests
+A aplicação foi dividida de forma modular para facilitar a manutenção:
 
-For end-to-end (e2e) testing, run:
+* **`AuthComponent`**: Gerencia as visualizações de login e criação de conta, utilizando formulários para capturar dados do usuário.
+* **`HomeComponent`**: A área restrita do usuário, onde o design expande para um painel informativo com clima e frases de impacto.
+* **Routing**: Utilização do `RouterModule` para transições suaves entre a autenticação e a área logada.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## ⚙️ Como rodar o projeto localmente
 
-## Additional Resources
+Se desejar clonar e rodar este projeto na sua máquina:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/jadeilton21/tela-login-angular.git](https://github.com/jadeilton21/tela-login-angular.git)
