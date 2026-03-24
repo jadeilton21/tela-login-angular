@@ -1,0 +1,213 @@
+:host {
+  --primary: #8b4513;
+  --accent: #d2691e;
+  --bg: #fdf5e6;
+  --sidebar-bg: #f5ecd7;
+  --white: #ffffff;
+  --text: #4a3421;
+}
+
+.welcome-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* SIDEBAR MINI */
+.sidebar-mini {
+  width: 120px;
+  background: var(--sidebar-bg);
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.logo-symbol {
+  font-size: 2.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.btn-logout {
+  padding: 10px 20px;
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  background: transparent;
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 60px;
+  overflow-y: auto;
+  perspective: 1000px; /* Para efeitos 3D leves */
+}
+
+.hero-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: typing 3s steps(40, end);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ZONE INTERACTION */
+.interaction-zone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.weather-meter-card {
+  grid-column: 1 / -1;
+}
+
+/* PROGRESS RING (Gráfico Abstrato) */
+.progress-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.progress-ring__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring__background {
+  fill: none;
+  stroke: rgba(139, 69, 19, 0.1);
+  stroke-width: 8;
+}
+
+.progress-ring__bar {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 339; /* Comprimento do círculo */
+  stroke-dashoffset: 85; /* Define o preenchimento (24°C / Max) */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  animation: progressRing 2s ease-out forwards;
+}
+
+.progress-ring__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* GLASS PANEL & CARDS */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  transform: translateY(-5px) rotateX(2deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.stats-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card-icon {
+  font-size: 2rem;
+}
+
+/* QUOTE CARD */
+.quote-card {
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ANIMAÇÕES */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes progressRing {
+  from { stroke-dashoffset: 339; }
+  to { stroke-dashoffset: 85; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up { animation: slideUp 0.6s ease forwards; }
+.fade-in { animation: fadeIn 0.8s ease forwards; }
+.fade-in-delayed { animation: fadeIn 1s ease 0.4s forwards; opacity: 0; }
