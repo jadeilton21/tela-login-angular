@@ -1,0 +1,49 @@
+<div class="welcome-wrapper">
+  <aside class="sidebar-mini">
+    <div class="logo-container">
+      <div class="logo-symbol">✨</div>
+      <span class="logo-text">Aura</span>
+    </div>
+    <button class="btn-logout">Sair</button>
+  </aside>
+
+  <main class="main-content">
+    <header class="hero-header fade-in">
+      <h1>Olá, <span class="highlight">{{ userName }}!</span> ✨</h1>
+      <p class="intro-text">{{ messageIntro }}</p>
+    </header>
+
+    <section class="interaction-zone">
+      <div class="weather-meter-card glass-panel slide-up">
+        <div class="meter-header">
+          <h2>Seu Clima Agora</h2>
+          <span class="badge online">Perfeito</span>
+        </div>
+        <div class="meter-display">
+          <div class="progress-ring">
+            <svg class="progress-ring__svg" viewBox="0 0 120 120">
+              <circle class="progress-ring__background" cx="60" cy="60" r="54"></circle>
+              <circle class="progress-ring__bar" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="progress-ring__text">24°C</div>
+          </div>
+          <p>Céu limpo, clima agradável fora e dentro.</p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let item of visualStats; let i = index" [style.animation-delay]="i * 0.15 + 's'">
+          <div class="card-icon">{{ item.icon }}</div>
+          <div class="card-info">
+            <h3>{{ item.value }}</h3>
+            <p>{{ item.label }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-card glass-panel fade-in-delayed">
+      <p class="quote-text">{{ quote }}</p>
+    </section>
+  </main>
+</div>
